@@ -4,8 +4,9 @@
 //
 
 :root {
-    // Chart variables
-    @each $color, $value in $chart-colors {
-        --bs-chart-#{$color}: #{$value};
-    }
+
+  // Chart variables
+  @each $color, $value in $chart-colors {
+    --bs-chart-#{$color}: #{$value};
+  }
 }

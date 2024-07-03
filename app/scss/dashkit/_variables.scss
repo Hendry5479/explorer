@@ -245,13 +245,13 @@ $h5-font-size: 0.8125rem !default;
 $h6-font-size: 0.625rem !default;
 
 $font-sizes: (
-    1: $h1-font-size,
-    2: $h2-font-size,
-    3: $h3-font-size,
-    4: $h4-font-size,
-    5: $h5-font-size,
-    6: $h6-font-size,
-) !default;
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size,
+  ) !default;
 
 $headings-margin-bottom: $spacer * 0.75 !default;
 $headings-font-weight: 500 !default;
@@ -269,13 +269,15 @@ $display-font-sizes: (
 $display-font-weight: 600 !default;
 $display-line-height: $headings-line-height !default;
 
-$lead-font-size: ($font-size-base * 1.25) !default;
+$lead-font-size: (
+  $font-size-base * 1.25) !default;
 
 $small-font-size: 0.8125rem !default;
 
 $text-muted: $gray-600 !default;
 
-$blockquote-font-size: ($font-size-base * 1.25) !default;
+$blockquote-font-size: (
+  $font-size-base * 1.25) !default;
 
 $hr-margin-y: 1rem !default;
 $hr-color: $border-color !default;
@@ -373,7 +375,8 @@ $input-focus-box-shadow: $input-btn-focus-box-shadow !default;
 
 $input-placeholder-color: $gray-500 !default;
 
-$input-height-inner-sm: ($font-size-sm * $input-btn-line-height-sm) + ($input-btn-padding-y-sm * 2) !default;
+$input-height-inner-sm: (
+  $font-size-sm * $input-btn-line-height-sm) + ($input-btn-padding-y-sm * 2) !default;
 
 $form-check-input-active-filter: none !default;
 
@@ -620,14 +623,17 @@ $code-color: $blue !default;
 //
 // Define common padding and border radius sizes and more.
 
-$box-shadow-lift: 0 1rem 2.5rem fade-out($black, 0.9), 0 0.5rem 1rem -0.75rem fade-out($black, 0.9) !default;
-$box-shadow-lift-lg: 0 2rem 5rem fade-out($black, 0.9), 0 0.5rem 1rem -0.75rem fade-out($black, 0.95) !default;
+$box-shadow-lift: 0 1rem 2.5rem fade-out($black, 0.9),
+  0 0.5rem 1rem -0.75rem fade-out($black, 0.9) !default;
+$box-shadow-lift-lg: 0 2rem 5rem fade-out($black, 0.9),
+  0 0.5rem 1rem -0.75rem fade-out($black, 0.95) !default;
 
 // Typography
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-size-xs: ($font-size-base * 0.6666666667) !default; // 10px
+$font-size-xs: (
+  $font-size-base * 0.6666666667) !default; // 10px
 
 $headings-letter-spacing: -0.02em !default;
 
@@ -655,8 +661,8 @@ $form-switch-min-height: 1.5rem !default;
 $form-check-circle-indicator-size: 1.375rem !default;
 $form-check-circle-indicator-border-radius: 50% !default;
 $form-check-circle-indicator-icon-checked: url(escape-svg(
-    "data:image/svg+xml,<svg viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M11.3333 1L3.99996 8.33333L0.666626 5' stroke='#{$white}' stroke-width='1.33333' stroke-linecap='round' stroke-linejoin='round'/></svg>"
-)) !default;
+ "data:image/svg+xml,<svg viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M11.3333 1L3.99996 8.33333L0.666626 5' stroke='#{$white}' stroke-width='1.33333' stroke-linecap='round' stroke-linejoin='round'/></svg>"
+  )) !default;
 $form-check-circle-indicator-bg-size: 0.75rem 0.5625rem !default;
 $form-check-circle-padding-start: 1.875rem !default;
 
@@ -695,11 +701,10 @@ $navbar-vibrant-color: fade-out($white, 0.3) !default;
 $navbar-vibrant-hover-color: $white !default;
 $navbar-vibrant-active-color: $white !default;
 $navbar-vibrant-brand-filter: brightness(0) invert(1) !default;
-$navbar-vibrant-toggler-icon-bg: str-replace(
-    url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='#{$navbar-vibrant-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"),
+$navbar-vibrant-toggler-icon-bg: str-replace(url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='#{$navbar-vibrant-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"),
     '#',
     '%23'
-) !default;
+  ) !default;
 
 $navbar-dark-bg: $gray-800-dark !default;
 $navbar-dark-border-color: $gray-800-dark !default;

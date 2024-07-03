@@ -8,13 +8,13 @@
 //
 
 .breadcrumb-item {
-    + .breadcrumb-item::before {
-        content: '\e930';
-        align-self: center;
-        font-size: 0.8rem;
-        font-family: 'Feather';
-        color: $breadcrumb-divider-color;
-    }
+  +.breadcrumb-item::before {
+    content: '\e930';
+    align-self: center;
+    font-size: 0.8rem;
+    font-family: 'Feather';
+    color: $breadcrumb-divider-color;
+  }
 }
 
 //
@@ -26,7 +26,7 @@
 // Reduces font size
 
 .breadcrumb-sm {
-    font-size: $breadcrumb-font-size-sm;
+  font-size: $breadcrumb-font-size-sm;
 }
 
 // Overflow
@@ -34,16 +34,16 @@
 // Allows the breadcrumb to be overflown horizontally
 
 .breadcrumb-overflow {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 
-    &::-webkit-scrollbar {
-        display: none;
-    }
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .breadcrumb-overflow .breadcrumb-item {
-    white-space: nowrap;
+  white-space: nowrap;
 }

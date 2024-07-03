@@ -3,18 +3,18 @@ import getReadableTitleFromAddress, { AddressPageMetadataProps } from '@utils/ge
 import { Metadata } from 'next/types';
 
 type Props = Readonly<{
-    params: {
-        address: string;
-    };
+  params: {
+    address: string;
+  };
 }>;
 
 export async function generateMetadata(props: AddressPageMetadataProps): Promise<Metadata> {
-    return {
-        description: `NFToken NFTs belonging to the collection ${props.params.address} on Solana`,
-        title: `NFToken Collection NFTs | ${await getReadableTitleFromAddress(props)} | Solana`,
-    };
+  return {
+    description: `NFToken NFTs belonging to the collection ${props.params.address} on Solana`,
+    title: `NFToken Collection NFTs | ${await getReadableTitleFromAddress(props)} | Solana`,
+  };
 }
 
 export default function NFTokenCollectionPage({ params: { address } }: Props) {
-    return <NFTokenCollectionNFTGrid collection={address} />;
+  return <NFTokenCollectionNFTGrid collection={address} />;
 }

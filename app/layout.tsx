@@ -11,47 +11,47 @@ import { Rubik } from 'next/font/google';
 import { Metadata } from 'next/types';
 
 export const metadata: Metadata = {
-    description: 'Inspect transactions, accounts, blocks, and more on the Solana blockchain',
-    manifest: '/manifest.json',
-    title: 'Explorer | Solana',
-    viewport: {
-        initialScale: 1,
-        maximumScale: 1,
-        width: 'device-width',
-    },
+  description: 'Inspect transactions, accounts, blocks, and more on the Solana blockchain',
+  manifest: '/manifest.json',
+  title: 'Explorer | Solana',
+  viewport: {
+    initialScale: 1,
+    maximumScale: 1,
+    width: 'device-width',
+  },
 };
 
 const rubikFont = Rubik({
-    display: 'swap',
-    subsets: ['latin'],
-    variable: '--explorer-default-font',
-    weight: ['300', '400', '700'],
+  display: 'swap',
+  subsets: ['latin'],
+  variable: '--explorer-default-font',
+  weight: ['300', '400', '700'],
 });
 
 export default function RootLayout({
-    analytics,
-    children,
+  analytics,
+  children,
 }: {
-    analytics?: React.ReactNode;
-    children: React.ReactNode;
+  analytics?: React.ReactNode;
+  children: React.ReactNode;
 }) {
-    return (
-        <html lang="en" className={`${rubikFont.variable}`}>
-            <body>
-                <ScrollAnchorProvider>
-                    <ClusterProvider>
-                        <ClusterModal />
-                        <div className="main-content pb-4">
-                            <Navbar />
-                            <MessageBanner />
-                            <ClusterStatusBanner />
-                            <SearchBar />
-                            {children}
-                        </div>
-                    </ClusterProvider>
-                </ScrollAnchorProvider>
-                {analytics}
-            </body>
-        </html>
-    );
+  return (
+    <html lang="en" className={`${rubikFont.variable}`}>
+      <body>
+        <ScrollAnchorProvider>
+          <ClusterProvider>
+            <ClusterModal />
+            <div className="main-content pb-4">
+              <Navbar />
+              <MessageBanner />
+              <ClusterStatusBanner />
+              <SearchBar />
+              {children}
+            </div>
+          </ClusterProvider>
+        </ScrollAnchorProvider>
+        {analytics}
+      </body>
+    </html>
+  );
 }

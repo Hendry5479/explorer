@@ -6,23 +6,23 @@ import { Metadata } from 'next/types';
 import { TransactionsProvider } from '@/app/providers/transactions';
 
 type Props = Readonly<{
-    params: {
-        address: string;
-    };
+  params: {
+    address: string;
+  };
 }>;
 
 export async function generateMetadata(props: AddressPageMetadataProps): Promise<Metadata> {
-    return {
-        description: `All tokens owned by the address ${props.params.address} on Solana`,
-        title: `Tokens | ${await getReadableTitleFromAddress(props)} | Solana`,
-    };
+  return {
+    description: `All tokens owned by the address ${props.params.address} on Solana`,
+    title: `Tokens | ${await getReadableTitleFromAddress(props)} | Solana`,
+  };
 }
 
 export default function OwnedTokensPage({ params: { address } }: Props) {
-    return (
-        <TransactionsProvider>
-            <OwnedTokensCard address={address} />
-            <TokenHistoryCard address={address} />
-        </TransactionsProvider>
-    );
+  return (
+    <TransactionsProvider>
+      <OwnedTokensCard address={address} />
+      <TokenHistoryCard address={address} />
+    </TransactionsProvider>
+  );
 }

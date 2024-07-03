@@ -6,45 +6,45 @@ import { RefreshCw } from 'react-feather';
 import { Address } from './Address';
 
 type AccountHeaderProps = {
-    title: string;
-    refresh: () => void;
+  title: string;
+  refresh: () => void;
 };
 
 type AccountProps = {
-    account: Account;
+  account: Account;
 };
 
 export function AccountHeader({ title, refresh }: AccountHeaderProps) {
-    return (
-        <div className="card-header align-items-center">
-            <h3 className="card-header-title">{title}</h3>
-            <button className="btn btn-white btn-sm" onClick={() => refresh()}>
-                <RefreshCw className="align-text-top me-2" size={13} />
-                Refresh
-            </button>
-        </div>
-    );
+  return (
+    <div className="card-header align-items-center">
+      <h3 className="card-header-title">{title}</h3>
+      <button className="btn btn-white btn-sm" onClick={() => refresh()}>
+        <RefreshCw className="align-text-top me-2" size={13} />
+        Refresh
+      </button>
+    </div>
+  );
 }
 
 export function AccountAddressRow({ account }: AccountProps) {
-    return (
-        <tr>
-            <td>Address</td>
-            <td className="text-lg-end">
-                <Address pubkey={account.pubkey} alignRight raw />
-            </td>
-        </tr>
-    );
+  return (
+    <tr>
+      <td>Address</td>
+      <td className="text-lg-end">
+        <Address pubkey={account.pubkey} alignRight raw />
+      </td>
+    </tr>
+  );
 }
 
 export function AccountBalanceRow({ account }: AccountProps) {
-    const { lamports } = account;
-    return (
-        <tr>
-            <td>Balance (SOL)</td>
-            <td className="text-lg-end text-uppercase">
-                <SolBalance lamports={lamports} />
-            </td>
-        </tr>
-    );
+  const { lamports } = account;
+  return (
+    <tr>
+      <td>Balance (SOL)</td>
+      <td className="text-lg-end text-uppercase">
+        <SolBalance lamports={lamports} />
+      </td>
+    </tr>
+  );
 }

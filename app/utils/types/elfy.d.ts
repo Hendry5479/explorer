@@ -1,4 +1,4 @@
 declare module 'elfy' {
-    const elfy: any;
-    export = elfy;
+  const elfy: any;
+  export = elfy;
 }

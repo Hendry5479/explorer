@@ -7,22 +7,22 @@ import { CompressedNFTInfoCard } from '@/app/components/account/CompressedNFTInf
 import { LoadingCard } from '@/app/components/common/LoadingCard';
 
 type Props = Readonly<{
-    params: {
-        address: string;
-    };
+  params: {
+    address: string;
+  };
 }>;
 
 function CompressionCardRenderer({
-    account,
-    onNotFound,
+  account,
+  onNotFound,
 }: React.ComponentProps<React.ComponentProps<typeof ParsedAccountRenderer>['renderComponent']>) {
-    return (
-        <Suspense fallback={<LoadingCard />}>
-            {<CompressedNFTInfoCard account={account} onNotFound={onNotFound} />}
-        </Suspense>
-    );
+  return (
+    <Suspense fallback={<LoadingCard />}>
+      {<CompressedNFTInfoCard account={account} onNotFound={onNotFound} />}
+    </Suspense>
+  );
 }
 
 export default function CompressionPageClient({ params: { address } }: Props) {
-    return <ParsedAccountRenderer address={address} renderComponent={CompressionCardRenderer} />;
+  return <ParsedAccountRenderer address={address} renderComponent={CompressionCardRenderer} />;
 }

@@ -8,18 +8,18 @@
 //
 
 .pagination .page-link {
-    line-height: $pagination-line-height;
-    font-size: $pagination-font-size;
+  line-height: $pagination-line-height;
+  font-size: $pagination-font-size;
 }
 
 .pagination-lg .page-link {
-    line-height: $pagination-line-height-lg;
-    font-size: $pagination-font-size-lg;
+  line-height: $pagination-line-height-lg;
+  font-size: $pagination-font-size-lg;
 }
 
 .pagination-sm .page-link {
-    line-height: $pagination-line-height-sm;
-    font-size: $pagination-font-size-sm;
+  line-height: $pagination-line-height-sm;
+  font-size: $pagination-font-size-sm;
 }
 
 //
@@ -29,27 +29,27 @@
 // Pagination tabs
 
 .pagination-tabs {
-    border-radius: 0;
-    border-top: $border-width solid $border-color;
+  border-radius: 0;
+  border-top: $border-width solid $border-color;
 }
 
 .pagination-tabs .page-link {
-    margin-top: -$border-width;
-    padding: $pagination-tabs-padding-y $pagination-tabs-padding-x;
-    background-color: $pagination-tabs-bg-color;
-    border-width: $border-width 0 0 0;
-    border-radius: 0 !important;
-    color: $pagination-tabs-color;
+  margin-top: -$border-width;
+  padding: $pagination-tabs-padding-y $pagination-tabs-padding-x;
+  background-color: $pagination-tabs-bg-color;
+  border-width: $border-width 0 0 0;
+  border-radius: 0 !important;
+  color: $pagination-tabs-color;
 }
 
 .pagination-tabs .page-link:hover {
-    color: $pagination-tabs-hover-color;
+  color: $pagination-tabs-hover-color;
 }
 
 .pagination-tabs .active .page-link {
-    background-color: $pagination-tabs-bg-color;
-    border-color: $pagination-active-border-color;
-    color: $pagination-tabs-active-color;
+  background-color: $pagination-tabs-bg-color;
+  border-color: $pagination-active-border-color;
+  color: $pagination-tabs-active-color;
 }
 
 // Pagination overflow
@@ -57,14 +57,14 @@
 // Allow links to overflow and make horizontally scrollable
 
 .pagination-overflow {
-    flex-wrap: nowrap;
-    overflow-x: auto;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
 .pagination-overflow::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .pagination-overflow .page-link {
-    white-space: nowrap;
+  white-space: nowrap;
 }

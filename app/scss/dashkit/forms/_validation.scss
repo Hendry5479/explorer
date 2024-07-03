@@ -9,9 +9,9 @@
 
 .form-control.is-valid:focus,
 .form-control.is-invalid:focus {
-    box-shadow: none;
+  box-shadow: none;
 
-    @if ($enable-shadows) {
-        box-shadow: $input-focus-box-shadow;
-    }
+  @if ($enable-shadows) {
+    box-shadow: $input-focus-box-shadow;
+  }
 }
